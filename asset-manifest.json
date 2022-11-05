@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/ashna-portfolio/static/js/main.57184195.chunk.js",
-    "main.js.map": "/ashna-portfolio/static/js/main.57184195.chunk.js.map",
+    "main.js": "/ashna-portfolio/static/js/main.d89a5f08.chunk.js",
+    "main.js.map": "/ashna-portfolio/static/js/main.d89a5f08.chunk.js.map",
     "runtime-main.js": "/ashna-portfolio/static/js/runtime-main.bc3a90f1.js",
     "runtime-main.js.map": "/ashna-portfolio/static/js/runtime-main.bc3a90f1.js.map",
     "static/css/2.679831fc.chunk.css": "/ashna-portfolio/static/css/2.679831fc.chunk.css",
-    "static/js/2.f66a2cb4.chunk.js": "/ashna-portfolio/static/js/2.f66a2cb4.chunk.js",
-    "static/js/2.f66a2cb4.chunk.js.map": "/ashna-portfolio/static/js/2.f66a2cb4.chunk.js.map",
+    "static/js/2.e5f82f8d.chunk.js": "/ashna-portfolio/static/js/2.e5f82f8d.chunk.js",
+    "static/js/2.e5f82f8d.chunk.js.map": "/ashna-portfolio/static/js/2.e5f82f8d.chunk.js.map",
     "index.html": "/ashna-portfolio/index.html",
     "static/css/2.679831fc.chunk.css.map": "/ashna-portfolio/static/css/2.679831fc.chunk.css.map",
-    "static/js/2.f66a2cb4.chunk.js.LICENSE.txt": "/ashna-portfolio/static/js/2.f66a2cb4.chunk.js.LICENSE.txt"
+    "static/js/2.e5f82f8d.chunk.js.LICENSE.txt": "/ashna-portfolio/static/js/2.e5f82f8d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bc3a90f1.js",
     "static/css/2.679831fc.chunk.css",
-    "static/js/2.f66a2cb4.chunk.js",
-    "static/js/main.57184195.chunk.js"
+    "static/js/2.e5f82f8d.chunk.js",
+    "static/js/main.d89a5f08.chunk.js"
   ]
 }
