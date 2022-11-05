@@ -1,5 +1,5 @@
 {
-  "homepage": "http://ashna-asrani27.github.io/ashna-portfolio",
+  "homepage": "https://ashna-asrani27.github.io/ashna-portfolio/",
   "name": "react-portfolio-starter-code-files",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +11,7 @@
     "normalize.css": "^8.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.6.0",
     "react-particles-js": "^3.5.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
@@ -19,8 +20,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "predeploy":"npm run buid",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

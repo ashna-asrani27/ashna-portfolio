@@ -10,6 +10,7 @@ import GlobalStyle from "./globalStyles"
 
 function App() {
   return <div>
+    {/* <Main/> */}
     <GlobalStyle />
     <ThemeProvider theme={lightTheme}>
       <Switch>
@@ -22,7 +23,7 @@ function App() {
 
       </Switch>
     </ThemeProvider>
-
+    {/* <h1>Ashna Asrani</h1> */}
   </div>
 
 }
