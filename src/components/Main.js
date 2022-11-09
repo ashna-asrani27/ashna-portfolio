@@ -6,6 +6,8 @@ import PowerButton from '../subComponents/PowerButton';
 import SocialIcons from '../subComponents/SocialIcons';
 import { Moon, YinYang } from './AllSvgs';
 import {FaPrayingHands} from 'react-icons/fa'
+import Intro from './Intro';
+import {motion} from 'framer-motion'
 
 const Contact = styled(NavLink)`
   color: ${props => props.theme.text};
@@ -41,10 +43,10 @@ const Interests = styled(NavLink)`
   z-index: 1;
 `;
 const Work = styled(NavLink)`
-  color: ${props => props.theme.text};
+  color: ${props => props.click ? props.theme.body : props.theme.text};
   position: absolute;
   top:50%;
-  left:calc(1rem + 2vw);;
+  left:calc(1rem + 2vw);
   transform: translate(-50%,-50%) rotate(-90deg) ;
   text-decoration: none;
   z-index: 1;
@@ -63,7 +65,7 @@ const BottomBar = styled.div`
 `;
 
 const About = styled(NavLink)`
-  color: ${props => props.theme.text};
+  color: ${props => props.click ? props.theme.body : props.theme.text};
   text-decoration: none;
   z-index: 1;
 `;
@@ -109,7 +111,20 @@ transition: all 1s ease;
   display: ${props => props.click ? 'none' : 'inline-block'};
   padding-top:1rem;
 }
-`
+`;
+
+const DarkDiv = styled.div`
+  position: absolute;
+  top:0;
+  background-color: #000;
+  bottom: 0;
+  right: 50%;
+  width: ${props => props.click ? '50%' : '0%'};
+  height: ${props => props.click ? '100%':'0%'};
+  z-index: 1;
+  ///* property name | duration | easing function | delay */
+  transition: height 0.5s ease, width 1s ease 0.5s;
+`;
 
 export const Main = () => {
   const [click,setClick] = useState(false);
@@ -119,12 +134,15 @@ export const Main = () => {
   }
   return (
     <MainContainer>
+    <DarkDiv click={click}/>
+
+    
       <Container>
       <PowerButton />
-        <LogoComponent />
-        <SocialIcons />
+        <LogoComponent theme={click ? 'dark' : 'light'} />
+        <SocialIcons theme={click ? 'dark' : 'light'}/>
         <Center click={click} onClick={() => handleClick()}>
-          <Moon  width={click ? 120 : 200} height={click?120 :  200} fill='currentColor'/>
+          <Moon  width={click ? 120 : 200} height={click? 120 :  200} fill='currentColor'/>
           {/* <FaPrayingHands size={150}/> */}
           {/* <YinYang width={150} height={150} fill='currentColor'/> */}
           
@@ -132,33 +150,49 @@ export const Main = () => {
            {/* <span> <h4>Click to know who am I!</h4></span> */}
         </Center>
         <Contact target="_blank" to={{ pathname: "mailto:asraniashna27@gmail.com" }}>
-          <h2 style={{ color: 'inherit' }}>
+          <motion.h2
+          whileHover={{scale:1.1}}
+          whileTap={{scale:0.9}}
+          >
             Let's Connect!
-          </h2>
+          </motion.h2>
         </Contact>
         <Interests to="/interests">
-          <h2>
+          <motion.h2
+          whileHover={{scale:1.1}}
+          whileTap={{scale:0.9}}
+          >
             Interests
-          </h2>
+          </motion.h2>
         </Interests>
-        <Work to="/work">
-          <h2>
+        <Work to="/work" click={click}>
+        <motion.h2
+          whileHover={{scale:1.1}}
+          whileTap={{scale:0.9}}
+          >
             Work
-          </h2>
+          </motion.h2>
         </Work>
         <BottomBar>
-          <About to="/about">
-            <h2>
+          <About to="/about" click={click}>
+          <motion.h2
+          whileHover={{scale:1.1}}
+          whileTap={{scale:0.9}}
+          >
               About
-            </h2>
+            </motion.h2>
           </About>
-          <Skills to="/skills">
-            <h2>
+          <Skills to="/skills" click={click}>
+          <motion.h2
+          whileHover={{scale:1.1}}
+          whileTap={{scale:0.9}}
+          >
               Skills
-            </h2>
+            </motion.h2>
           </Skills>
         </BottomBar>
       </Container>
+      {click ? <Intro click={click}/> : null}
     </MainContainer>
     // <h1>Hiii</h1>
   )
